@@ -1,28 +1,19 @@
 import "./Video.css";
+import PlayButton from "../components/PlayButton";
 
-function Video({
-  image,
-  title,
-  cannel,
-  verified,
-  views,
-  time,
-  onPlay,
-  onPause,
-}) {
-  let playing = false;//don't use this approach
-  function handleEvent() {
-    if (playing) onPause();
-    else onPlay();
-    playing=!playing;
-  }
-
+function Video({id, image, title, cannel, verified, views, time,deleteVideo,editVideo}) {
   return (
     <>
-      <div className="card" onClick={handleEvent}>
+      <div className="card">
         <div className="container">
+          <button className="close" onClick={()=>deleteVideo(id)}>X</button>
+          <button className="edit" onClick={()=>editVideo(id)}>Edit</button>
+          <PlayButton
+            onPlay={() => console.log("Playing..", title)}
+            onPause={() => console.log("Paused", title)}
+          ></PlayButton>
           <div className="image">
-            <img src={image} alt={title} />
+            <img src={image}alt={title} />
           </div>
           <div className="title">{title}</div>
           <div className="cannel">

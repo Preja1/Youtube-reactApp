@@ -1,0 +1,10 @@
+input {
+  margin: 10px;
+  padding: 10px;
+  display: block;
+}
+.addVideo {
+  margin-left: 10px;
+  padding: 8px;
+  background-color: rgb(205, 212, 255);
+}

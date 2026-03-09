@@ -1,45 +1,58 @@
 .card {
-    display: inline-block; 
-    border-radius: 12px;
-    transition: 0.3s ease;
-    background-color: transparent;  
-    /* position: relative; */
+  display: inline-block;
+  border-radius: 12px;
+  /* transition: 0.3s ease; */
+  /* background-color: transparent;   */
+  /* position: relative; */
 }
 
-.card:hover{
-    background-color: rgb(245, 182, 110,0.5);
-    /* transform: scale(1.02);  */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.card:hover {
+  background-color: rgb(245, 182, 110, 0.5);
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-.container{
-    margin-left:10px; 
-    margin-right:10px;
-    margin-top:10px;
-    float: left;
-    cursor: pointer; 
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  position: relative;
+  float: left;
+  cursor: pointer;
 }
 
-.image{
-    width: 100%;
-    height: 170px;    
-    /* object-fit: cover; */
+.image {
+  width: 100%;
+  height: 170px;
+  /* object-fit: cover; */
 }
 .image img {
   width: 100%;
   height: 100%;
   border-radius: 12px;
 }
-.title{
-    /* color: white; */
-    font-weight: bold;
-    margin-bottom:5px;
-
+.title {
+  /* color: white; */
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.cannel,.views{
-    font-size: small;
-    color: rgb(163, 163, 163);
-    
+.cannel,
+.views {
+  font-size: small;
+  color: rgb(163, 163, 163);
 }
-.views span{
-    padding: 5px;
+.views span {
+  padding: 5px;
 }
+.close {
+  position: absolute;
+  right: 0;
+  padding-left: 10px;
+  background-color: red;
+}
+ .edit{
+    position: absolute;
+    margin-top: 143px;
+    right: 0;
+    background-color: rgb(143, 202, 229);
+    padding: 4px;
+ }
