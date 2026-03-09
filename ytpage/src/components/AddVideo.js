@@ -1,6 +1,6 @@
 import "./AddVideo.css";
 import { useEffect, useState } from "react";
-const initalState = {
+const initialState = {
   image: "",
   title: "",
   cannel: "Coder",
@@ -9,23 +9,32 @@ const initalState = {
   time: "",
 };
 function AddVideo({ addVideos, editForm, updateForm }) {
-  let [video, setVideo] = useState(initalState);
+  let [video, setVideo] = useState(initialState);
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (editForm) {
-      updateForm(video)
+    if (
+      video.title === "" ||
+      video.views === "" ||
+      video.time === "" ||
+      video.image === ""
+    ) {
+      alert("Please fill all fields and select an image!");
     } else {
-      addVideos(video)
+      if (editForm) {
+        updateForm(video);
+      } else {
+        addVideos(video);
+      }
+      setVideo(initialState);
     }
-    setVideo(initalState)
   }
 
   useEffect(() => {
     if (editForm) {
-      setVideo(editForm)
+      setVideo(editForm);
     }
-  }, [editForm])
+  }, [editForm]);
 
   function handleChange(e) {
     e.stopPropagation();
