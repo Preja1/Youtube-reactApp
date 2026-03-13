@@ -1,10 +1,22 @@
+.box{
+  background-color: gray;
+  width: 620px;
+  height: 154px;
+  margin: 10px;
+}
 input {
   margin: 10px;
   padding: 10px;
+  border-radius: 10px;
+  border-width: 2px;
+  /* display: block; */
+}
+.file{
+  margin: 5px;
   display: block;
 }
 .addVideo {
-  margin-left: 10px;
+  margin-left: 14px;
   padding: 8px;
   background-color: rgb(205, 212, 255);
 }

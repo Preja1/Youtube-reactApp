@@ -49,7 +49,7 @@ function AddVideo({ addVideos, editForm, updateForm }) {
     }
   }
   return (
-    <form>
+    <form className="box">
       <input
         type="text"
         name="title"
@@ -65,7 +65,7 @@ function AddVideo({ addVideos, editForm, updateForm }) {
         onChange={handleChange}
         value={video.views}
         required
-      ></input>
+      />
       <input
         type="text"
         name="time"
@@ -73,9 +73,10 @@ function AddVideo({ addVideos, editForm, updateForm }) {
         onChange={handleChange}
         value={video.time}
         required
-      ></input>
+      />
 
       <input
+        className="file"
         type="file"
         accept="image/*"
         onChange={handleImageChange}
