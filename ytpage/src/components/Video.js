@@ -1,12 +1,12 @@
 import "./Video.css";
 import PlayButton from "../components/PlayButton";
 
-function Video({id, image, title, cannel, verified, views, time,deleteVideo,editVideo}) {
+function Video({id, image, title, cannel, verified, views, time,dispatch,editVideo}) {
   return (
     <>
       <div className="card">
         <div className="container">
-          <button className="close" onClick={()=>deleteVideo(id)}>X</button>
+          <button className="close" onClick={()=>dispatch({ type: "DELETE", payload: id })}>X</button>
           <button className="edit" onClick={()=>editVideo(id)}>Edit</button>
           <PlayButton
             onPlay={() => console.log("Playing..", title)}

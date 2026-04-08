@@ -8,7 +8,7 @@ const initialState = {
   views: "",
   time: "",
 };
-function AddVideo({ addVideos, editForm, updateForm }) {
+function AddVideo({ dispatch, editForm }) {
   let [video, setVideo] = useState(initialState);
 
   function handleSubmit(e) {
@@ -22,9 +22,9 @@ function AddVideo({ addVideos, editForm, updateForm }) {
       alert("Please fill all fields and select an image!");
     } else {
       if (editForm) {
-        updateForm(video);
+        dispatch({ type: "UPDATE", payload: video });
       } else {
-        addVideos(video);
+        dispatch({ type: "ADD", payload: video });
       }
       setVideo(initialState);
     }
